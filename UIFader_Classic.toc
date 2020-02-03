@@ -1,0 +1,10 @@
+## Interface: 80200
+## Title: UIFader Classic
+## Notes: Addon to fade away parts of the default ui.
+## SavedVariablesPerCharacter: MyAddonDB
+## Version: 1.0
+## Author: Hermitjesus
+localization.lua
+core.lua
+functions.lua
+configuration.lua
