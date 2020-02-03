@@ -1,4 +1,4 @@
-## Interface: 80200
+## Interface: 11302
 ## Title: UIFader Classic
 ## Notes: Addon to fade away parts of the default ui.
 ## SavedVariablesPerCharacter: MyAddonDB
