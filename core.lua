@@ -57,7 +57,6 @@ function eventHandlers.PLAYER_LOGIN()
 end
 function eventHandlers.LOADING_SCREEN_DISABLED() --start fading when player enter world.
 	delay = 1 + GetTime()
-	print("loading screen disabled")
 	FadeCanceled = true;
 	targetTaken = false;
 	if InCombatLockdown() ~= true then
