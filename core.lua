@@ -2,6 +2,7 @@ local addonName, addon = ...
 local L = addon.L
 local openedTabsTable = {} --stores all the opened tabs removes them when they are hidden.
 local panel = CreateFrame("Frame", addonName .. "panelFrame")
+panel.name = addonName
 local FadeCanceled = nil;
 local disabled = false;
 local settingOpen = nil;
