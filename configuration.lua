@@ -4,6 +4,7 @@ local L = addon.L
 function ExamplePanel_OnLoad(panel)
 	panel.name = addonName
 	panel:Hide()
+	InterfaceOptions_AddCategory(panel)
 	
 	local function CreateCheckBox(label, description, onClick)
 		local check = CreateFrame("CheckButton", addonName .. label, panel, "InterfaceOptionsCheckButtonTemplate")
@@ -244,5 +245,4 @@ function ExamplePanel_OnLoad(panel)
 	panel.cancel = function()
 		addon.func.cancelPressed()
 	end
-	InterfaceOptions_AddCategory(panel)
 end
