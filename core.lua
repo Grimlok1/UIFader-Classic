@@ -1,8 +1,7 @@
 local addonName, addon = ...
 local L = addon.L
 local openedTabsTable = {} --stores all the opened tabs removes them when they are hidden.
-local panel = CreateFrame("Frame", addonName .. "panelFrame")
-panel.name = addonName
+local panel = CreateFrame("Frame", addonName .. "panelFrame", UIParent)
 local FadeCanceled = nil;
 local disabled = false;
 local settingOpen = nil;
@@ -240,7 +239,6 @@ function eventHandlers.ADDON_LOADED(name) -- loads the saved variables when addo
 		local oldValidateActionBarTransition = ValidateActionBarTransition
 		ValidateActionBarTransition = function()
 		end
-		
 		addon.db = sv --saved variables are now in form: addon.db.variable
 		ExamplePanel_OnLoad(panel) -- configuration	
 		
