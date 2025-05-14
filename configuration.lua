@@ -2,9 +2,16 @@ local addonName, addon = ...
 local L = addon.L
 
 function ExamplePanel_OnLoad(panel)
+	print("create interface panel")	
 	panel.name = addonName
 	panel:Hide()
-	InterfaceOptions_AddCategory(panel)
+	if InterfaceOptions_AddCategory then
+		InterfaceOptions_AddCategory(panel)
+	else
+		local category, layout = Settings.RegisterCanvasLayoutCategory(panel, panel.name)
+		Settings.RegisterAddOnCategory(category)
+		addon.settingsCategory = category
+	end
 	
 	local function CreateCheckBox(label, description, onClick)
 		local check = CreateFrame("CheckButton", addonName .. label, panel, "InterfaceOptionsCheckButtonTemplate")

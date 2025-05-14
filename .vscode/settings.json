@@ -85,6 +85,7 @@
         "WorldMapFrame",
         "CharacterFrame",
         "PlayerFrame_OnEvent",
-        "InterfaceOptions_AddCategory"
+        "InterfaceOptions_AddCategory",
+        "Settings"
     ]
 }
